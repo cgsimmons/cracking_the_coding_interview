@@ -9,19 +9,21 @@ require 'spec_helper'
 
 def compress(str)
   result = []
-  tmp = ''
-  compress = false
+  compressed = false
   str.each_char do |char|
-    if tmp != char
-      tmp = char
-      result.push(tmp)
-      result.push(1)
-    else
-      result[-1] += 1
-      compress = true
-    end
+    compressed = compress_char(result, char)
   end
-  compress ? result.join('') : str
+  compressed ? result.join('') : str
+end
+
+def compress_char(result, char)
+  if result[-2] != char
+    result.push(char).push(1)
+    false
+  else
+    result[-1] += 1
+    true
+  end
 end
 
 describe 'Test' do
@@ -30,5 +32,8 @@ describe 'Test' do
   end
   it 'no compression' do
     expect(compress('abca')). to eq('abca')
+  end
+  it 'null string' do
+    expect(compress('')). to eq('')
   end
 end
