@@ -1,4 +1,8 @@
-require'spec_helper'
+# Implement an algorithm to determine if a string has
+#  all unique characters. What if you cannot use
+#  additional data structures?
+
+require 'spec_helper'
 
 def dups?(s)
   return false if s.size <= 1
