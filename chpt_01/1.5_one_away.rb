@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 def one_away(str_one, str_two)
-  return false if (str_one.chars - str_two.chars).length > 1
-  true
+  (str_one.chars - str_two.chars).length < 2
 end
 
 describe 'Test' do
