@@ -12,9 +12,9 @@ end
 
 describe 'Tests' do
   it 'should be true' do
-    expect(check_perm('abc', 'bca')).to be true
+    expect(check_perm('abc', 'bca')).to be(true)
   end
   it 'should not be true' do
-    expect(check_perm('abc', 'def')).to be false
+    expect(check_perm('abc', 'def')).to be(false)
   end
 end
