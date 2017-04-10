@@ -3,6 +3,7 @@ require_relative './node.rb'
 
 # Singly Linked list implementation
 class LinkedList
+  attr_reader :head
   def initialize(data)
     @head = Node.new(data, nil)
   end
