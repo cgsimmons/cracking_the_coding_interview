@@ -90,4 +90,21 @@ class LinkedList
     end
     tmp_node.data
   end
+
+  def partition(value)
+    new_head = new_tail = current_node = @head
+    while current_node
+      next_node = current_node.next
+      if current_node.data < value
+        current_node.next = new_head
+        new_head = current_node
+      else
+        new_tail.next = current_node
+        new_tail = current_node
+      end
+      current_node = next_node
+    end
+    new_tail.next = nil
+    @head = new_head
+  end
 end
