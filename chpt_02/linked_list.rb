@@ -76,4 +76,18 @@ class LinkedList
       current_node = current_node.next
     end
   end
+
+  # k < 2 will return last node
+  def kth_to_last_element(k)
+    current_node = tmp_node = @head
+    while current_node
+      current_node = current_node.next
+      if k < 1
+        tmp_node = tmp_node.next
+      else
+        k -= 1
+      end
+    end
+    tmp_node.data
+  end
 end
