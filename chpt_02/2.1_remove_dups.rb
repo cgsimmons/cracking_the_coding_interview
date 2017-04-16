@@ -1,9 +1,9 @@
-# Write code to remove duplicates from an unsorted li nked list.
+# Write code to remove duplicates from an unsorted linked list.
 # FOLLOW UP
 # How would you solve this problem if a temporary buffer is not allowed?
 
 require 'spec_helper'
-require_relative './linked_list.rb'
+require_relative '../lib/linked_list/linked_list.rb'
 
 describe 'remove_dups without buffer' do
   it 'remove dup in middle' do

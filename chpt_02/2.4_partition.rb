@@ -10,7 +10,7 @@
 # Output: 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
 
 require 'spec_helper'
-require_relative './linked_list.rb'
+require_relative '../lib/linked_list/linked_list.rb'
 
 describe 'partition' do
   it 'partition from middle' do

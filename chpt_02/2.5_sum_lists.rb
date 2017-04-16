@@ -12,7 +12,7 @@
 # Output: 9 -> 1 -> 2. That is, 912.
 
 require 'spec_helper'
-require_relative './linked_list.rb'
+require_relative '../lib/linked_list/linked_list.rb'
 
 def sum_lists(list_one, list_two)
   remainder = 0

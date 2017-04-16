@@ -8,7 +8,7 @@
 #  a->b->d->e->f
 
 require 'spec_helper'
-require_relative './linked_list.rb'
+require_relative '../lib/linked_list/linked_list.rb'
 
 describe 'delete node from middle' do
   it 'delete some node' do

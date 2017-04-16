@@ -2,7 +2,7 @@
 #  of a singly linked list.
 
 require 'spec_helper'
-require_relative './linked_list.rb'
+require_relative '../lib/linked_list/linked_list.rb'
 
 describe 'return_kth_to_last' do
   it 'last element' do
